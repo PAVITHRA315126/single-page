@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f2fbff;
+
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: #d9f4ff;
+
+    animation: circleMove 2s infinite ease-in-out;
+}
+
+.text {
+    position: absolute;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    color: #159ed5;
+
+    animation: textMove 2s infinite ease-in-out;
+}
+
+.bolt {
+    position: absolute;
+
+    top: 45px;
+    right: 35px;
+
+    font-size: 60px;
+
+    animation: boltMove 0.8s infinite;
+}
+
+
+/* Circle animation */
+
+@keyframes circleMove {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Text animation */
+
+@keyframes textMove {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Lightning animation */
+
+@keyframes boltMove {
+
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.4) rotate(10deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+}
